@@ -60,7 +60,7 @@ function newVrInp()
         Swal.fire({
             icon: 'error',
             title: '<b style="font-family:arial;">Enter all gaps!</b>',
-            text: 'You must to complete all gaps before downloading!',
+            text: 'You must to complete all gaps before downloading! Each gup must contain at least 2 symbols!',
         })
         return;
     }
