@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="scripts.js"></script>
+    <title>Basketbola datu ievads</title>
+</head>
+<body onload="getDates();">
+    <div class="wM">
+        <div class="cnT30Pr">
+            <h1 class="headerMain">Basketbola datu ievads</h1>
+            <div class="textUinput">
+                <b class="inputText">Laiks: </b>
+                <input type="text" class="inputsInf" id="inputTime" minlength="2" maxlength="25">
+                <p style="margin: 0;"><b class="timeRNow" id="timeRNow">555555</b></p>
+            </div>
+            <div class="textUinput">
+                <b class="inputText">Komandas nosaukums: </b>
+                <input type="text" class="inputsInf" id="inputTeamName" minlength="2" maxlength="100">
+            </div>
+            <div class="textUinput">
+                <b class="inputText">Spēlētajā vārds un uzvārds: </b>
+                <input type="text" class="inputsInf" id="inputSAname" minlength="2" maxlength="100">
+            </div>
+            <div class="textUinput">
+                <b class="inputText">Spēlētājs ieguva punktus: </b>
+                <select name="points" id="optionPoints" class="inputsInf">
+                    <option value="1">1 punkts</option>
+                    <option value="2">2 punkti</option>
+                    <option value="3">3 punkti</option>
+                </select>
+            </div>
+            <div class="textUinput">
+                <b class="inputText">Ievadītas komandas esošas spēles rezultāts: </b><input type="number" class="inputsInf w6Px" min="0" id="teamEs" max="999"> <br>
+                <b class="inputText">Pretinieku komandas esošas spēles rezultāts: </b><input type="number" class="inputsInf w6Px" min="0" id="teamAn" max="999">
+            </div>
+
+            <div class="button">
+                <button class="buttonPr" onclick="newVrInp();">
+                    <b>Jaunais iemetiens</b>
+                </button>
+                <br>
+                <button class="buttonPr" onclick="buttonPress();" style="margin-top:10px;">
+                    <b>Download CSV file</b>
+                </button>
+                <button class="buttonPrRedBorders" onclick="clearIeprV();" style="margin-top:10px;">
+                    <b>Clear previous dates</b>
+                </button>
+            </div>
+            <div class="spaceUB"></div>
+        </div>
+    </div>
+    <a id="a2" download=".csv" style="display: none;" href="">Download</a>
+</body>
+</html>
